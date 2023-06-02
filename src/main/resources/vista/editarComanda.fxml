@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacio.AddComandaController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="43.0" prefWidth="599.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="NOVA COMANDA">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <left>
+            <VBox prefHeight="257.0" prefWidth="173.0" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Nombre">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblLimitCredit" text="Data Comanda">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTelefon" text="Data Desitjada">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblNom" text="Data d'Enviament">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDni" text="Client">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtNumero" editable="false" />
+                  <TextField fx:id="txtDataComan" editable="false" />
+                  <TextField fx:id="txtDataDesitjada" />
+                  <TextField fx:id="txtDataEnvio" />
+                  <TextField fx:id="txtClient" editable="false" />
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </center>
+   <bottom>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnGuardar" onAction="#crearComanda" prefHeight="39.0" prefWidth="153.0" text="GUARDAR" />
+                  <Button fx:id="btnCancelar" onAction="#cancelarComanda" prefHeight="39.0" prefWidth="153.0" text="CANCELAR" />
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <TableView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="tblLinia" prefWidth="150.0" text=" Linia Comanda" />
+                <TableColumn fx:id="tblNom" prefWidth="150.0" text="Nom" />
+                  <TableColumn fx:id="tblQuantitat" prefWidth="150.0" text="Quantitat" />
+                  <TableColumn fx:id="tblPreu" prefWidth="150.0" text="Preu Unitari" />
+              </columns>
+            </TableView>
+         </center>
+         <right>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="afegirLinea" mnemonicParsing="false" onAction="#switchToLiniaComanda" text="AFEGIR " />
+                  <Button fx:id="btnEliminarLinea" mnemonicParsing="false" text="ELIMINAR" />
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+   </bottom>
+</BorderPane>

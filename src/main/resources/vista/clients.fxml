@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacio.ClientsController">
+    <children>
+        <Label text="CLIENTS">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Pane prefHeight="500.0" prefWidth="500.0">
+            <children>
+                <Button fx:id="btnProductes" layoutX="42.0" layoutY="448.0" onAction="#switchToProductes" prefWidth="100.0" text="PRODUCTES" />
+                <Button fx:id="btnComandes" layoutX="358.0" layoutY="448.0" onAction="#switchToComandes" prefWidth="100.0" text="COMANDES" />
+                <TableView fx:id="tv_1" layoutX="26.0" layoutY="73.0" prefHeight="284.0" prefWidth="446.0">
+                    <columns>
+                        <TableColumn fx:id="colEmail" prefWidth="88.0" text="Email" />
+                        <TableColumn fx:id="colDni" prefWidth="66.0" text="DNI" />
+                        <TableColumn fx:id="colNom" prefWidth="88.0" text="Nom" />
+                        <TableColumn fx:id="colTelefon" prefWidth="66.0" text="Telèfon" />
+                        <TableColumn fx:id="colLimitCredit" prefWidth="68.0" text="LímitCrèdit" />
+                        <TableColumn fx:id="colAniversari" prefWidth="69.0" text="Aniversari" />
+                    </columns>
+                </TableView>
+                <Button fx:id="btnDelClient" layoutX="351.0" layoutY="385.0" onAction="#deleteClient" prefHeight="25.0" prefWidth="114.0" text="ELIMINAR CLIENT" />
+                <Button fx:id="btnAddClient" layoutX="42.0" layoutY="385.0" onAction="#switchToAddClient" prefWidth="100.0" text="AFEGIR CLIENT" />
+                <Button fx:id="btnEditClient" layoutX="200.0" layoutY="385.0" onAction="#actualizarClientEditar" prefWidth="100.0" text="EDITAR CLIENT" />
+            </children>
+        </Pane>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacio.EditProducteController">
+   <children>
+      <Label text="EDITAR PRODUCTE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Pane prefHeight="500.0" prefWidth="500.0">
+         <children>
+            <Button fx:id="btnEditar" layoutX="40.0" layoutY="354.0" onAction="#editarProducte" prefHeight="39.0" prefWidth="153.0" text="EDITAR" />
+            <Button fx:id="btnCancelar" layoutX="273.0" layoutY="354.0" onAction="#switchToProductes" prefHeight="39.0" prefWidth="153.0" text="CANCELAR" />
+            <VBox layoutX="40.0" layoutY="63.0" prefHeight="260.0" prefWidth="161.0">
+               <children>
+                  <Label fx:id="lblNom" text="Nom">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lblDescripcio" text="Descripcio">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lblStock" text="Stock">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lblPreu" text="Preu">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="225.0" layoutY="70.0" prefHeight="260.0" prefWidth="244.0">
+               <children>
+                  <TextField fx:id="txtNom">
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="txtDescripcio">
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="txtStock">
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="txtPreu">
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
